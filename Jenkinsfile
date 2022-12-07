@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Building our image') {
 steps{
-sh 'docker build -t ramitr/exam thourayas2:1.0.0 .'
+sh 'docker build -t ramitr/examthourayas2:1.0 .'
 		}
 	}
 		stage('Login to Docker Hub') {      	
