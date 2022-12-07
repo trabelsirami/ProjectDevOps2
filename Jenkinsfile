@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Building our image') {
 steps{
-sh 'docker build -t ramitr/ExamThourayaS2:1.0.0 .'
+sh 'docker build -t ramitr/examthourayas2:1.0.0 .'
 		}
 	}
 		stage('Login to Docker Hub') {      	
@@ -42,7 +42,7 @@ sh 'docker build -t ramitr/ExamThourayaS2:1.0.0 .'
       steps{      sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p ${DOCKERHUB_CREDENTIALS_PSW} ${DOCKERHUB_CREDENTIALS_REPOSITORY} '        
                    		
 	echo 'Login Completed'                              
-	sh 'docker push ramitr/ExamThourayaS2:1.0.0'         
+	sh 'docker push ramitr/examthourayas2:1.0.0'         
 	       echo 'Push Image Completed'       
       }           
     }
