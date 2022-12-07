@@ -11,7 +11,7 @@ pipeline {
             }
              
 
-        }
+        
         stage("mvn build") {
             steps {
                 script {
@@ -22,4 +22,5 @@ pipeline {
             }
         }
       }
+     }
       
