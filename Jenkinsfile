@@ -79,6 +79,12 @@ pipeline {
                     }
                 }
             }} 
+            stage("SonarQube Analysis") {
+          agent any  
+           steps {
+                     sh 'mvn sonar:sonar -Dsonar.projectKey=examthourayas2 -Dsonar.host.url=http://172.20.2.128/:9000 -Dsonar.login=7ea7804d15c1be815311a98d2c17bd0bfc193e12 -Dsonar.exclusions=**/*.java'           
+           }
+         }
         stage('Building our image') {
 steps{
 sh 'docker build -t ramitr/ramiexam:1.0.0 .'
