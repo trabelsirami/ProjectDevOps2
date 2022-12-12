@@ -14,7 +14,7 @@ services:
       - db:/var/lib/mysql
  sonarqube:
     image: sonarqube:8.9.7-community
-    container_name: festive_goldberg
+    container_name: sonarqubenew
    
     ports:
       - "9000:9000"
