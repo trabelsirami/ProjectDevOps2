@@ -17,7 +17,7 @@ services:
     container_name: sonarqubenew
    
     ports:
-      - "9000:9000"
+      - "9001:9001"
       
     volumes:
       - sonarqube_conf:/opt/sonarqube/conf
