@@ -82,7 +82,7 @@ pipeline {
            stage("SonarQube Analysis") {
           agent any  
            steps {
-                     sh 'mvn sonar:sonar -Dsonar.projectKey=devops -Dsonar.host.url=http://172.20.2.128:9000 -Dsonar.login=5ad0aa0051c3949586664dcc1117ce10e797e33a -Dsonar.exclusions=**/*.java'           
+                     sh 'mvn sonar:sonar -Dsonar.projectKey=devops2 -Dsonar.host.url=http://172.20.2.128:9000 -Dsonar.login=a0cacb59ea505d12088b5627080677847efbabc7 -Dsonar.exclusions=**/*.java'           
            }
          }
         stage('Building our image') {
