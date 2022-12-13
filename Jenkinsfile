@@ -107,12 +107,7 @@ sh 'docker build -t ramitr/ramiexam:1.0.0 .'
       }           
     }
     
-    stage("docker compose")
-          {
-              steps{
-                  sh'docker-compose up -d'
-              }
-          } 
+   
       }
       }
       
