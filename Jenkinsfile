@@ -106,7 +106,12 @@ sh 'docker build -t ramitr/ramiexam:1.0.0 .'
 	       echo 'Push Image Completed'       
       }           
     }
-    
+     stage("docker compose")
+          {
+              steps{
+                  sh'docker-compose up -d'
+              }
+          } 
    
       }
       }
